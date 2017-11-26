@@ -13,7 +13,7 @@ public class MbiandaDenestelArrayTestDriver {
   public static void main(String[] args) {
 
     Scanner user_input = new Scanner(System.in);
-    JavaArray moldArray = new JavaArray();
+    JavaArray myArray = new JavaArray();
 
     System.out.println("How big is your array?");
     int arraySize = user_input.nextInt();
@@ -26,36 +26,77 @@ public class MbiandaDenestelArrayTestDriver {
 
       int arrayElements = user_input.nextInt();
       user_array[i] = arrayElements;
-
     }
 
-    moldArray.setArray(user_array);
+    myArray.setArray(user_array);
 
-    if (moldArray.isInIncreasingOrder() == true) {
+    System.out.println("What would you like to do with your array?");
+    boolean control = true;
 
-      System.out.println("Your array is in increasing order!");
+    while(control){
+
+      System.out.println("------------Your options are---------------");
+      System.out.println("1. Is my array in increasing order?");
+      System.out.println("2. Is my array in decreasing order?");
+      System.out.println("3. What is the highest value in my array?");
+      System.out.println("4. What is the lowest value in my array?");
+      System.out.println("5. What is the Total of my array?");
+      System.out.println("6. What is the average of my array?");
+      System.out.println("7. What is the Median value of my array?");
+      System.out.println("8. What is the Mode of my array?");
+      System.out.println("9. What is the Range of my array?");
+      System.out.println("0. TO EXIT");
+      int userChoice = user_input.nextInt();
+
+      if(userChoice == 0) {
+        control = false;
+      }
+      else{
+        switch (userChoice) {
+
+          case 1:
+              if (myArray.isInIncreasingOrder() == true)
+              {
+                System.out.println("Your array is in increasing order!");
+                }
+              else
+              {
+                System.out.println("Your array is not in increasing order!");
+                }
+            break;
+          case 2:
+              if (myArray.isInDecreasingOrder() == true)
+              {
+                System.out.println("Your array is in decreasing order!");
+                }
+              else
+              {
+                System.out.println("Your array is not in increasing order!");
+                }
+            break;
+          case 3:
+              System.out.println("The highest number in your array is " + myArray.getHighest());
+            break;
+          case 4:
+              System.out.println("The lowest value in your array is " + myArray.getLowest());
+            break;
+          case 5:
+              System.out.println("The total value of your array is " + myArray.getTotal());
+            break;
+          case 6:
+              System.out.println("The average value of your array is " + myArray.getAverage());
+            break;
+          case 7:
+            break;
+          case 8:
+            break;
+          case 9:
+            break;
+          default:
+            break;
+        }
+      }
 
     }
-    else if (moldArray.isInDecreasingOrder() == true) {
-
-      System.out.println("Your array is in decreasing order!");
-
-    }
-    else {
-
-      System.out.println("Your array has no order!");
-    }
-
-    double high = moldArray.getHighest();
-    double low = moldArray.getLowest();
-    double total = moldArray.getTotal();
-    double average = moldArray.getAverage();
-
-    System.out.println("The highest number in your array is " + high);
-    System.out.println("The lowest value in your array is " + low);
-    System.out.println("The total value of your array is " + total);
-    System.out.println("The average value of your array is " + average);
-
-
   }
 }
