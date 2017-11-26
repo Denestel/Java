@@ -90,6 +90,7 @@ public class MbiandaDenestelArrayTestDriver {
           case 7:
             break;
           case 8:
+              System.out.println("The Mode of your array is " + myArray.getMode());
             break;
           case 9:
             break;

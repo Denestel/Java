@@ -87,8 +87,8 @@ public class JavaArray {
 
   //get the contents of the array
   public void inIt(){
-    for(int element: array){
-      System.out.println(element);
+    for(double element: array){
+      System.out.print(element + ", ");
     }
   }//end method inIt
 
@@ -114,15 +114,23 @@ public class JavaArray {
 
   //get the mode of the Array
   public double getMode(){
-    int count = 0;
-    int temp;
+    double mode = array[0];
+    double maxCount = 0;
 
-  /*  for(int i = 0; i < array.length; i++){
-      while(array.hasNext()){
-        array[i].compareTo(array[i+1])
+    for(double element: array){
+      double value = element;
+      double count = 1;
+      for(double element2: array){
+        if (element2 == value) {
+          count++;
+        }
+        if(count > maxCount){
+          mode = value;
+          maxCount = count;
+        }
       }
-    }*/
-	return 0;
+    }
+	return mode;
   }// end method getMode
 
   //get the range of the Array
