@@ -5,6 +5,7 @@
 @Date: 4/6/17
 @Version: 1.0
 ************************************************************************/
+import java.util.*;
 
 public class JavaArray {
 
@@ -84,6 +85,13 @@ public class JavaArray {
     return total;
   }//end method getTotal
 
+  //get the contents of the array
+  public void inIt(){
+    for(int element: array){
+      System.out.println(element);
+    }
+  }//end method inIt
+
   //get the average of the array
   public double getAverage() {
 
@@ -94,13 +102,13 @@ public class JavaArray {
 
   //get the median of the Array
   public double getMedian(){
-    array.sort();
+    Arrays.sort(array);
 
     if((array.length%2) != 0){
       return array[(array.length/2)-1];
     }
     else{
-      return array[(array.length/2)], array[(array.length/2)-1];
+      return array[(array.length/2)]; //array[(array.length/2)-1];
     }
   }//end method getMedian
 
@@ -112,14 +120,14 @@ public class JavaArray {
   /*  for(int i = 0; i < array.length; i++){
       while(array.hasNext()){
         array[i].compareTo(array[i+1])
-      }*/
-    }
-
+      }
+    }*/
+	return 0;
   }// end method getMode
 
   //get the range of the Array
   public double getRange(){
-
+	return 0;
   }//end method getRange
 
   //get the array

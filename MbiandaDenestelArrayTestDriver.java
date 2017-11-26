@@ -1,9 +1,9 @@
 /***********************************************************************
-@Title: MbiandaDenestelArrayTestDriver.java
+@Title: FinalArrayTestDriver.java
 @Purpose: To get familiar with class, array, and their usage
 @Author: Mbianda Denestel
-@Date: 4/6/17
-@Version: 1.0
+@Date: 11/25/17
+@Version: 2.0
 ************************************************************************/
 
 import java.util.*;
@@ -45,6 +45,7 @@ public class MbiandaDenestelArrayTestDriver {
       System.out.println("7. What is the Median value of my array?");
       System.out.println("8. What is the Mode of my array?");
       System.out.println("9. What is the Range of my array?");
+      System.out.println("10. What is in my array?");
       System.out.println("0. TO EXIT");
       int userChoice = user_input.nextInt();
 
@@ -91,6 +92,9 @@ public class MbiandaDenestelArrayTestDriver {
           case 8:
             break;
           case 9:
+            break;
+          case 10:
+              myArray.inIt();
             break;
           default:
             break;
