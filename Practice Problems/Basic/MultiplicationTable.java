@@ -13,7 +13,7 @@ import java.util.*;
 public class MultiplicationTable{
   public static void main(String[] args) {
 
-    Scanner user_input = new Scanner(System.in);
+    Scanner user_input = new Scanner(Sys.in);
     int[] solutions = new int[10];
 
       System.out.println("What is your number?");
