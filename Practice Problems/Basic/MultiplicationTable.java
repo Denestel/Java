@@ -16,20 +16,27 @@ public class MultiplicationTable{
     Scanner user_input = new Scanner(Sys.in);
     int[] solutions = new int[10];
 
-      System.out.println("What is your number?");
+      System.out.println("What is your number for your times table?");
       int userNum = user_input.nextInt();
-      multiTable(userNum, solutions);
-  }
-  public static void multiTable(int x, int[] populate)
-  {
-    int a;
-    for(int i = 0; i < populate.length; i++){
-        a = x * i;
-        populate[i] = a;
-    }
 
-    for(int element : populate){
-      System.out.println(element);
+      timesTable(userNum);
+
+  }
+  public static void timesTable(int userNum){
+
+    int[] tableArray = multiplyInt(userNum);
+    for(int i = 0; i < tableArray.length; i++){
+      System.out.println(userNum + " * " + i + " = " + tableArray[i]);
     }
+  }
+
+  public static int[] multiplyInt(int x)
+  {
+    int[] populate = new int[10];
+    for(int i = 0; i< populate.length; i++){
+      int a = x * i;
+      populate[i] = a;
+    }
+    return populate;
   }
 }
